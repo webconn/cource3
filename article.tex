@@ -4,6 +4,7 @@
 \usepackage[T2A]{fontenc}
 \usepackage{amsfonts}
 \usepackage{verbatim}
+\usepackage[final]{pdfpages}
 
 \usepackage[english,russian]{babel}
 \usepackage{graphicx}
@@ -20,6 +21,8 @@
 
 \begin{document}
 
+\includepdf[pages=1]{titul.pdf}
+
 \tableofcontents
 
 \newpage
@@ -30,7 +33,7 @@
 \include{i2c_review}
 \include{opermon}
 \include{implementation}
-
+\include{conclusion}
 
 \include{references}
 
