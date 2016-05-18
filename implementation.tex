@@ -89,7 +89,16 @@
 
 \label{client_implementation}
 
+Для реализации поддержки адаптера на клиентской стороне были выполены следующие действия:
 
+\begin{enumerate}
+ \item описано представление обмена в Tabexchange (файлы tabexchange/exchange.cpp и tabexchange/exchange.h);
+ \item описано представление адаптера и реализован интерфейс взаимодействия с серверной частью в Opermon (файлы opermon/cardagent.cpp, opermon/cardagent.h и opermon/opermon.cpp);
+ \item добавлено значение BPI2CChannel в список типов адаптеров в Tabexchange (файл tabexchange/tabexchangecommon.h, enum ChannelType);
+ \item реализованы виджеты для отображения данных обменов и настройки параметров в sma (файлы sma/bpi2c[channelinfo, channelinfowidget, channelwidgettab, checker, exchangedetails, exchangemodeltools, tablemodels].[cpp, h]);
+ \item в sma/Makefile добавлены правила для сборки новых файлов;
+ \item добавлено создание экземпляров классов виджетов и их начальная настройка в фабрику виджетов (файл sma/channelfactory\_su.cpp).
+\end{enumerate}
 
 
 Снимок экрана с окном получившегося интерфейса можно посмотреть в приложении \ref{app:figures} на рисунке \ref{fig:opermon}.
