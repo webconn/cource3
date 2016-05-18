@@ -4,6 +4,7 @@
 \usepackage[T2A]{fontenc}
 \usepackage{amsfonts}
 \usepackage{verbatim}
+\usepackage{listings}
 \usepackage[final]{pdfpages}
 
 \usepackage[english,russian]{babel}
@@ -14,6 +15,14 @@
 \graphicspath{ {./img/} }
 
 \date{19.12.15}
+
+\lstset{
+basicstyle=\small\ttfamily,
+columns=flexible,
+breaklines=true,
+captionpos=b,
+frame=single
+}
 
 %opening
 \title{Основа}
@@ -32,6 +41,7 @@
 \include{intro}
 \include{i2c_review}
 \include{opermon}
+\include{i2c_bus}
 \include{implementation}
 \include{testing}
 \include{refactoring}
