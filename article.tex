@@ -6,6 +6,7 @@
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage[final]{pdfpages}
+\usepackage{indentfirst}
 
 \usepackage[english,russian]{babel}
 \usepackage{graphicx}
@@ -32,17 +33,19 @@ frame=single
 
 \includepdf[pages=1]{titul.pdf}
 
+\include{annotation}
+
 \tableofcontents
 
 \newpage
 
 %\include{title.tex}
-\include{annotation}
 
 \include{intro}
+
+\include{i2c_bus}
 \include{i2c_review}
 \include{opermon}
-\include{i2c_bus}
 \include{implementation}
 \include{testing}
 \include{refactoring}
